@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.customerapi.utilities.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.customerapi.testcases.TC003_Add_Customer">
+        <methods>
+          <include name="Setup"/>
+          <include name="checkResponseTime"/>
+          <include name="checkStatusCode"/>
+        </methods>
+      </class> <!-- com.customerapi.testcases.TC003_Add_Customer -->
+      <class name="com.customerapi.testcases.TC001_Get_All_Customers">
+        <methods>
+          <include name="checkContentLength"/>
+          <include name="checkStatusLine"/>
+          <include name="Setup"/>
+          <include name="checkContentType"/>
+          <include name="checkResponseTime"/>
+          <include name="checkStatusCode"/>
+          <include name="checkServerType"/>
+          <include name="checkResponseBody"/>
+        </methods>
+      </class> <!-- com.customerapi.testcases.TC001_Get_All_Customers -->
+      <class name="com.customerapi.testcases.TC002_Get_Single_Customer">
+        <methods>
+          <include name="checkContentType"/>
+          <include name="checkStatusLine"/>
+          <include name="checkServerType"/>
+          <include name="Setup"/>
+          <include name="checkContentLength"/>
+          <include name="checkResponseTime"/>
+        </methods>
+      </class> <!-- com.customerapi.testcases.TC002_Get_Single_Customer -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
